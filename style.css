@@ -11,6 +11,17 @@
     --Grayish-Blue: hsl(246, 25%, 77%);
 }
 
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Primary-Red);
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -19,4 +30,10 @@
     color: hsl(228, 45%, 44%); 
     text-decoration: none;
     font-weight: 600;
+}
+
+@media screen and (max-width: 415px) {
+    body {
+        background-image: url(./images/bg-intro-mobile.png);
+    }
 }
