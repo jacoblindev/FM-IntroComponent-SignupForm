@@ -20,10 +20,61 @@
 body {
     background-image: url(./images/bg-intro-desktop.png);
     background-color: var(--Primary-Red);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90vh 10vh;
+    grid-template-areas: "hero cta"
+                         "footer footer";
+    align-items: center;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+#hero {
+    grid-area: hero;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 2.7rem;
+    line-height: 1.2em;
+}
+
+#hero p {
+    font-size: .9rem;
+    line-height: 1.8em;
+    padding: 2em 2em 0 0;
+}
+
+/* CTA Section */
+#CTA {
+    grid-area: cta;
+    color: white;
+}
+
+#CTA #title {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--Accent-Blue);
+    border-radius: 10px;
+    box-shadow: 0 8px 0 0 rgba(62, 60, 73, 0.35);
+    margin-bottom: 1em;
+}
+
+
+
+/* Footer Section */
+footer {
+    grid-area: footer;
+    color: whitesmoke;
 }
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 12px; 
     text-align: center; 
 }
 .attribution a { 
