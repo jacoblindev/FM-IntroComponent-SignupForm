@@ -95,10 +95,29 @@ body {
     border-color: var(--Dark-Blue);
 }
 
-#CTA .error {
+#CTA span.error {
     display: none;
+    float: right;
+    color: var(--Primary-Red);
+    font-size: .7rem;
+    position: relative;
+    top: -16px;
 }
 
+#CTA .error img {
+    position: absolute;
+    right: 25px;
+    top: -43px;
+}
+
+#CTA input:invalid {
+    border: 2px solid var(--Primary-Red);
+    color: var(--Primary-Red);
+}
+
+#CTA input:invalid + .error {
+    display: unset;
+}
 
 #CTA button {
     width: 100%;
@@ -113,6 +132,11 @@ body {
     background-color: var(--Primary-Green);
     box-shadow: 0 5px 0 0 hsl(154, 58%, 38%);
     margin-bottom: 1.2em;
+}
+
+#CTA button:hover {
+    opacity: .7;
+    cursor: pointer;
 }
 
 #CTA #TS {
@@ -146,5 +170,36 @@ footer {
 @media screen and (max-width: 415px) {
     body {
         background-image: url(./images/bg-intro-mobile.png);
+        width: 90vw;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 60% 15%;
+        grid-template-areas: "hero"
+                             "cta"
+                             "footer";
+
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        line-height: 1.2em;
+    }
+    
+    #hero p {
+        padding: 2em 2em 0 2em;
+    }
+
+    #CTA #title {
+        padding: 1em 4em 1em 4em;
+    }
+
+    #CTA #TS {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .attribution { 
+        padding: 2em;
     }
 }
